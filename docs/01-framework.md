@@ -34,4 +34,4 @@ Plus one design constraint: **portable.** Facts, skills and history stay in file
 - [02 · Scorecard](02-scorecard-evidence.md): every tool rated on each part of each type, plus the requirements.
 - [03 · Design](03-design-by-type.md): what fills each part, and how it reaches the agent.
 - [04 · Testing](04-testing-by-type.md): an automated test for each part, over short and medium timeframes.
-- [Discussion topics](../discussion/README.md): open questions, grouped the same way.
+- [Decision session](../discussion/README.md): 4 rounds of concrete decisions to agree a buildable pilot.

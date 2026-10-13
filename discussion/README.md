@@ -1,16 +1,35 @@
-# Discussion topics
+# Decision session: agree an implementable memory design in 4 rounds
 
-For the peer-team session. Each topic covers what we're seeing, our current position, the questions we'd like your view on, and how we'll test it. Grouped by the four types of memory, then the cross-cutting topics.
+**Goal:** leave the session with a pilot we can build: every component chosen, every number set, every owner named.
 
-| # | Topic | Memory type |
-|---|---|---|
-| 01 | [Working memory · Picking up where we left off](01-working-handoffs.md) | Working |
-| 02 | [Semantic memory · Things agents should just know](02-semantic-confirmed-facts.md) | Semantic |
-| 03 | [Semantic memory · Stopping bad facts becoming "true"](03-semantic-bad-facts.md) | Semantic |
-| 04 | [Episodic memory · Index as you go, or search on query?](04-episodic-capture.md) | Episodic |
-| 05 | [Procedural memory · Skills that improve over time](05-procedural-skills.md) | Procedural |
-| 06 | [Across all types · One engine or two?](06-engine-choice.md) | All |
-| 07 | [Across all types · Same memory in every tool](07-other-tools.md) | All |
-| 08 | [Across all types · How do we know it's working?](08-measuring.md) | All |
+**Format:** a group chat between agent teams. Each round lists numbered decisions. Every decision has a **proposed default**, the alternatives, and the evidence. We are not asking open questions; we are asking you to **accept, amend or reject** a specific proposal.
 
-**Closing question for everyone:** what would you *not* do again?
+## How to respond
+
+Reply once per round, one line per decision you have a view on:
+
+```
+D2.3 ACCEPT
+D2.5 AMEND: capture at end of session, not per turn. Reason: per-turn doubled our token cost (our measurement: ...)
+D2.6 REJECT: prefer Hindsight over G-Brain. Evidence: ...
+```
+
+**Rules**
+1. **Silence = accept.** Only reply on decisions you'd change.
+2. **Amend and reject need a specific alternative and a reason.** Evidence or first-hand experience beats opinion.
+3. **One round per turn.** The facilitator (Bob) posts a short summary of what's agreed before moving on.
+4. **No consensus after one exchange → the default stands**, marked "revisit after pilot data". The tests decide, not the debate.
+5. **Out of scope** for this session: anything not needed to start the pilot.
+
+## Agenda
+
+| Round | Decide | Decisions | Output |
+|---|---|---|---|
+| [1 · Framework](round-1-framework.md) | Are we solving the right problem, measured the right way? | D1.1–D1.3 | Agreed requirements + success numbers |
+| [2 · Memory types](round-2-memory-types.md) | What fills each part of each memory type? | D2.1–D2.8 | Component for every row of the design |
+| [3 · Cross-cutting](round-3-cross-cutting.md) | Access, outside tools, test harness | D3.1–D3.5 | Access model + test settings |
+| [4 · Commit](round-4-commit.md) | Pilot scope, order, owners, go/no-go | D4.1–D4.4 | A buildable pilot plan |
+
+Results are recorded in [decision-log.md](decision-log.md), which becomes the build spec.
+
+**Background, if needed:** [framework](../docs/01-framework.md) · [scorecard + evidence](../docs/02-scorecard-evidence.md) · [design](../docs/03-design-by-type.md) · [tests](../docs/04-testing-by-type.md)

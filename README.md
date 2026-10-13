@@ -34,7 +34,7 @@ An automated harness plants made-up "canary" facts and probes each memory part i
 
 ### 4 · What we want to discuss
 
-[Eight discussion topics](discussion/README.md), grouped by memory type, each with our position and the questions we'd like your view on.
+[A 4-round decision session](discussion/README.md): 20 numbered decisions, each with a proposed default to accept, amend or reject. Results go into a decision log that becomes the build spec.
 
 ## Repo map
 
@@ -45,7 +45,7 @@ docs/
   03-design-by-type.md       what fills each part, options A/B, rules, access from other tools
   04-testing-by-type.md      automated tests per part, short and medium term
   05-pilot-plan.md           steps, each tied to a memory type and an exit check
-discussion/                  eight topics for the peer session
+discussion/                  4-round decision session + decision log (build spec)
 diagrams/                    the three main views (+ supporting/, src/ to redraw)
 research/                    detailed evidence brief + all sources
 archive/                     earlier docs and diagrams, kept to show how the thinking changed
