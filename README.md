@@ -24,13 +24,16 @@ We run six Hermes agents (chief of staff, engineering, travel, health, boat, fin
 
 ![Three levels of recall](diagrams/memory-recall-levels.png)
 
-- **Level 1, always known:** a short "core card" built nightly from confirmed facts and loaded into every conversation. No search, so it can't be missed.
+- **Source of truth:** an **Obsidian vault** of confirmed facts, in plain Markdown, edited by people and kept in git. Everything else is built from it or indexed alongside it.
+- **Level 1, always known:** a short "core card" built nightly from the Obsidian vault and loaded into every conversation. No search, so it can't be missed.
 - **Level 2, recalled automatically:** a memory engine queried by the system **before every reply**, not when the agent remembers to look.
 - **Level 3, searched on demand:** deep search of older history, linked to the exact conversation.
 
 We are vetting **two options for level 2:**
 - **Option A:** G-Brain only, one shared memory.
 - **Option B:** Mnemosyne for fast per-agent recall, plus G-Brain for shared facts and deep search.
+
+Both are judged by the same **automated test suite**. It plants made-up "canary" facts and probes every level 10 minutes, a day, a week and a month later. It also tracks how often agents ask about things they should already know.
 
 ![Config layers](diagrams/memory-config-layers.png)
 
@@ -42,8 +45,11 @@ We are vetting **two options for level 2:**
 4. [docs/04-network-access.md](docs/04-network-access.md): Tailscale vs Cloudflare for outside tools
 5. [docs/05-pilot-plan.md](docs/05-pilot-plan.md): pilot scope and pass/fail tests
 6. [docs/06-discussion-questions.md](docs/06-discussion-questions.md): questions for the peer team
-7. [research/evidence-brief-2026-10-13.md](research/evidence-brief-2026-10-13.md): the detailed, source-linked research brief
-8. [research/sources.md](research/sources.md): every source, grouped by type and confidence
+7. [docs/07-test-methodology.md](docs/07-test-methodology.md): automated tests for every level, over short and medium timeframes
+8. [research/evidence-brief-2026-10-13.md](research/evidence-brief-2026-10-13.md): the detailed, source-linked research brief
+9. [research/sources.md](research/sources.md): every source, grouped by type and confidence
+
+![Automated test timeline](diagrams/memory-test-timeline.png)
 
 ## Scorecard
 

@@ -14,6 +14,8 @@
 
 ## Test set (frozen before step 2)
 
+Full automated method: [07-test-methodology.md](07-test-methodology.md). Build the test harness **before** installing anything, so step 2 has a baseline. Minimum set:
+
 - 20 "should already know" questions (fresh conversation, no hint to look things up)
 - Changed fact: the old value must disappear
 - Planted false claim: it must not be adopted
@@ -25,5 +27,6 @@
 ## Ongoing upkeep target
 
 - Weekly: 5-minute review of proposed facts
-- Monthly: automated 20-question test; alert only on a drop
+- Nightly / weekly / monthly automated suite; alert only on a drop
+- Headline number: the **should-have-known rate** from real conversations
 - Skills are patched after real wins and mistakes

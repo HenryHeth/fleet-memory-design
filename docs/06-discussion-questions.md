@@ -7,5 +7,5 @@
 5. **Index as you go vs on query:** do you extract decisions during the conversation, or only search the raw history at query time? Which mattered more?
 6. **Sharing across agents:** one memory for all agents, or separate memories with a shared fact layer? How do you handle sensitive facts?
 7. **Outside tools:** have you connected Sesame, Muse, Grok or Dot to your memory? Did the login flow work?
-8. **Measurement:** how do you know your memory is getting better or worse? Any regression test you'd recommend?
+8. **Measurement:** how do you know your memory is getting better or worse? We plan canary facts probed at 10 minutes, a day, a week and a month, plus a should-have-known rate from real chats. What would you add or cut?
 9. **What would you not do again?**

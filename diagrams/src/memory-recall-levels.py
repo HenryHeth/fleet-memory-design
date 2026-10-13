@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 from pathlib import Path
 import math, sys
 out = Path(sys.argv[1]) if len(sys.argv) > 1 else Path('memory-recall-levels.png')
-W, H = 1900, 1980
+W, H = 1900, 2200
 im = Image.new('RGB', (W, H), '#f7f9fc'); d = ImageDraw.Draw(im)
 reg = '/System/Library/Fonts/Supplemental/Verdana.ttf'; bold = '/System/Library/Fonts/Supplemental/Verdana Bold.ttf'
 def F(n, b=False): return ImageFont.truetype(bold if b else reg, n)
@@ -30,7 +30,7 @@ T(95, 206, 'Hermes agents · Claude Code · Codex  (cloud apps: read-only)', 22,
 levels = [
  ('1', 'ALWAYS KNOWN', 'Core card', green, '#e5f4ea',
   'Loaded at the start of every conversation. No search, no AI step, so it cannot be missed.',
-  'Address, family, standing rules, active projects. Built nightly from confirmed facts.'),
+  'Address, family, standing rules, active projects. Built nightly from the Obsidian vault.'),
  ('2', 'RECALLED AUTOMATICALLY', 'Before every reply', purple, '#f0e9fa',
   'The memory engine is queried by the system before the model answers, not when the agent remembers to look.',
   'Recent decisions, related past conversations, people and projects mentioned.'),
@@ -48,16 +48,23 @@ for n, cap, name, c, fill, how, ex in levels:
     T(1032, y+38, 'EXAMPLE', 16, c, True)
     wrap(1032, y+66, ex, W-90-1032-30, 20, dark)
     y += lh
+# source of truth band
+B((60, y, W-60, y+170), '#1f5a3d', None)
+T(95, y+22, 'SOURCE OF TRUTH  ·  OBSIDIAN VAULT', 22, '#b9f0cf', True)
+wrap(95, y+62, 'Confirmed facts in plain Markdown, edited by people, kept in git. Feeds the level 1 core card nightly and is indexed by G-Brain for levels 2 and 3. Engines may propose facts; only a confirmed edit lands here.', W-220, 21, '#ffffff', False, 31)
+for x in (500, 950, 1400):
+    A((x, y-22), (x, y-4), '#1f5a3d', 5)
+y += 190
 # options
 oy = y + 20
 T(60, oy, 'WHO FILLS LEVEL 2?  VET BOTH IN THE PILOT', 28, dark, True)
 cw = (W-60*2-40)//2
 opts = [
  ('OPTION A', 'G-Brain only', teal,
-  ['One shared memory for every agent and tool', 'G-Brain plugs into the Hermes pre-reply hook', 'Fewer moving parts, nothing can disagree'],
+  ['One shared index of Obsidian + chats for all', 'G-Brain plugs into the Hermes pre-reply hook', 'Fewer moving parts, nothing can disagree'],
   'Risk: G-Brain\'s Hermes hookup is unverified; may need a small plugin.'),
  ('OPTION B', 'Mnemosyne + G-Brain', purple,
-  ['Mnemosyne: fast local recall per agent', 'G-Brain: shared facts + deep search', 'Mnemosyne ranks below confirmed facts'],
+  ['Mnemosyne: fast local recall per agent', 'G-Brain: indexes Obsidian + deep search', 'Mnemosyne ranks below confirmed facts'],
   'Risk: two memories can disagree; weakest published evidence.'),
 ]
 for i, (tag, name, c, pts, risk) in enumerate(opts):
@@ -72,6 +79,6 @@ for i, (tag, name, c, pts, risk) in enumerate(opts):
 fy = oy + 510
 B((60, fy, W-60, fy+190), '#1f344f', None)
 T(95, fy+24, 'PASS / FAIL TEST (same for both options)', 22, '#9fcbff', True)
-wrap(95, fy+66, 'Fresh conversation. Ask 20 things the agents should already know, without telling them to look. Any "let me check" or question back to the user is a fail. Run from Hermes and from Claude Code; answers must match.', W-220, 21, '#ffffff', False, 32)
+wrap(95, fy+66, 'Same automated suite for both options: every level, tested minutes, a day, a week and a month after a fact is planted. Any "let me check" on a basic fact is a fail. See docs/07-test-methodology.md.', W-220, 21, '#ffffff', False, 32)
 im = im.crop((0, 0, W, fy+230))
 im.save(out); print(out, im.size)

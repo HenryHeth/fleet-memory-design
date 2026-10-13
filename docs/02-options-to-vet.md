@@ -22,7 +22,7 @@ Both options share levels 1 and 3, the config layers and the trust rules. They d
 
 ## How we decide
 
-Run both against the **same frozen question set**, on the same two pilot agents:
+Full method: [07-test-methodology.md](07-test-methodology.md). Two cloned test profiles get identical scripted conversations for 30 days, scored on:
 
 1. **"Should already know" test (the deciding one):** fresh conversation, 20 questions the agents should know, with no instruction to look anything up. Any "let me check" or question back to the user is a fail.
 2. **Changed-fact test:** change a fact; the old value must stop appearing.
