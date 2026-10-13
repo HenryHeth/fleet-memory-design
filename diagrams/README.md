@@ -1,6 +1,7 @@
 # Diagrams
 
 Current:
+- `memory-four-types-scorecard.png`: **master view**, the four memory types by tool and design option
 - `memory-recall-levels.png`: three levels of recall and the two options to vet
 - `memory-config-layers.png`: config layers and recommendations
 - `memory-scorecard-v2.png`: outcome-based scorecard

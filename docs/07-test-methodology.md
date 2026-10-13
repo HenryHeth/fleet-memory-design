@@ -45,6 +45,7 @@ Canary answers are graded by **exact match on the unique marker**, with no AI ju
 | **Distractors** | Two similar canaries (blue tin / red tin); the right one is returned | Every run |
 | **Cross-tool** | Hermes and Claude Code give the same answer from the same memory | Day → month |
 | **Access** | A cloud-app token cannot read a private fact | Weekly |
+| **Skills** | Right skill loads unprompted for common requests; a patched skill changes behaviour next day; Claude Code finds the same skill | Day, week |
 | **Failure** | Memory engine stopped: the agent says it can't verify rather than guessing | Monthly |
 
 These map onto the five LongMemEval ability types: extraction, multi-session reasoning, time reasoning, knowledge updates and abstention. Results stay comparable with published work.

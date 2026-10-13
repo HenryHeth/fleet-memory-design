@@ -20,6 +20,12 @@ We run six Hermes agents (chief of staff, engineering, travel, health, boat, fin
 4. **Low upkeep.** About 5 minutes a week from the human.
 5. **Portable.** Facts, skills and history stay in files we own, so the memory engine can be swapped.
 
+## The four types of memory (start here)
+
+![Four types scorecard](diagrams/memory-four-types-scorecard.png)
+
+The design is organised around the four standard memory types (working, semantic, episodic, procedural), each split into the parts that behave differently, and scored against our requirements. Full mapping, evidence and tests for each type: [docs/00-four-types-scorecard.md](docs/00-four-types-scorecard.md).
+
 ## Proposed design, in short
 
 ![Three levels of recall](diagrams/memory-recall-levels.png)
@@ -35,10 +41,9 @@ We are vetting **two options for level 2:**
 
 Both are judged by the same **automated test suite**. It plants made-up "canary" facts and probes every level 10 minutes, a day, a week and a month later. It also tracks how often agents ask about things they should already know.
 
-![Config layers](diagrams/memory-config-layers.png)
-
 ## Reading order
 
+0. [docs/00-four-types-scorecard.md](docs/00-four-types-scorecard.md): **master view**, the design by memory type, with evidence and tests
 1. [docs/01-design.md](docs/01-design.md): the recommended design, config layers and trust rules
 2. [docs/02-options-to-vet.md](docs/02-options-to-vet.md): Option A vs Option B, and how we'll decide
 3. [docs/03-research-findings.md](docs/03-research-findings.md): what the research says, including what we got wrong at first
@@ -49,13 +54,11 @@ Both are judged by the same **automated test suite**. It plants made-up "canary"
 8. [research/evidence-brief-2026-10-13.md](research/evidence-brief-2026-10-13.md): the detailed, source-linked research brief
 9. [research/sources.md](research/sources.md): every source, grouped by type and confidence
 
-![Automated test timeline](diagrams/memory-test-timeline.png)
+## Supporting views
 
-## Scorecard
-
-![Outcome scorecard](diagrams/memory-scorecard-v2.png)
-
-Rated on **results** (does the right memory show up, is it right, what does it cost), not on feature lists. These are judgement ratings from product docs, one independent test and user reports. They are not measurements of our own setup.
+- [Outcome scorecard](diagrams/memory-scorecard-v2.png): earlier outcome-only view, superseded by the four-type scorecard above
+- [Config layers](diagrams/memory-config-layers.png)
+- [Test timeline](diagrams/memory-test-timeline.png)
 
 ## How the thinking changed
 

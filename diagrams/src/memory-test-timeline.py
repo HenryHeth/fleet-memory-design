@@ -25,6 +25,7 @@ rows = [
  ('Updates', 'old value disappears', '#1f7f86', ['', 'changed fact', 'no old value', 'no old value']),
  ('Bad facts', 'never promoted', '#b5452f', ['planted claim', 'not in vault', 'not in card', 'not in card']),
  ('Handoff', 'pick up mid-task', '#5a4fb0', ['new session', 'other agent', '', '']),
+ ('Skills', 'right skill, unasked', '#7951a6', ['', 'skill loads', 'patch sticks', 'Claude finds it']),
  ('Cross-tool', 'same answer everywhere', '#4f6075', ['', 'Hermes = Claude', 'Hermes = Claude', 'all 6 agents']),
  ('Guardrails', 'access + failure', '#4f6075', ['', '', 'cloud token denied', 'engine down: says so']),
 ]
