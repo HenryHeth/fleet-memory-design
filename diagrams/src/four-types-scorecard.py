@@ -61,5 +61,5 @@ for i, (v, lab) in enumerate([(0, 'none'), (1, 'limited'), (2, 'good'), (3, 'str
     ball(60 + i*170, y+20, v, '#5c6f86', 17); T(88 + i*170, y+8, lab, 18, '#40536a')
 T(780, y+8, 'No single tool fills its row. Hermes today fails "shared" and "shows up unasked", the gap users feel.', 18, red, True)
 y += 50
-T(40, y, 'Why each score: docs/00-four-types-scorecard.md', 17, '#40536a')
+T(40, y, 'Why each score: docs/02-scorecard-evidence.md', 17, '#40536a')
 im = im.crop((0, 0, W, y + 50)); im.save(out); print(out, im.size)

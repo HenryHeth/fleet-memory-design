@@ -1,12 +1,11 @@
 # Diagrams
 
-Current:
-- `memory-four-types-scorecard.png`: **master view**, the four memory types by tool and design option
-- `memory-recall-levels.png`: three levels of recall and the two options to vet
-- `memory-config-layers.png`: config layers and recommendations
-- `memory-scorecard-v2.png`: outcome-based scorecard
-- `memory-test-timeline.png`: automated tests by level and timeframe
+Main views, numbered to match the README:
 
-`src/` holds the Python (Pillow) scripts that draw them: `python3 src/<name>.py <out.png>`. They use macOS Verdana fonts.
+1. `01-four-types-scorecard.png`: who covers each part of each memory type, plus the requirements
+2. `02-design-by-type.png`: what fills each part in Options A and B, plus the trust rules
+3. `03-test-matrix.png`: automated tests per part, short and medium term
 
-`earlier/` keeps superseded versions in order, showing how the thinking changed.
+`supporting/` holds the recall-levels and config-layers views referenced from the design doc.
+
+`src/` holds the Python (Pillow) scripts: `python3 src/<name>.py <out.png>`. They use macOS Verdana fonts.
