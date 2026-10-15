@@ -6,9 +6,9 @@ Filled in during the session. Once complete, this is the build spec for the pilo
 
 | ID | Decision | Default proposed | Outcome | Final wording / amendment | Raised by |
 |---|---|---|---|---|---|
-| D1.1 | Structure | Four memory types, seven parts | | | |
-| D1.2 | Requirements order | Unasked > bad facts > shared > upkeep > tools > portable | | | |
-| D1.3 | Success numbers | See round 1 table | | | |
+| D1.1 | Structure | Four memory types, seven parts | ✏️ | Eight parts: add **standing rules** (how to behave) under procedural, separate from skills and facts. Tested by planted situations. | LifeOS; Bob agreed |
+| D1.2 | Requirements order | Unasked > bad facts > shared > upkeep > tools > portable | ✏️ | Order kept (shared stays above other tools). Upkeep: one number, ≤ 10 min/week in pilot, ≤ 5 min after. | Bob; LifeOS agreed |
+| D1.3 | Success numbers | See round 1 table | ✏️ | Add: injected context per reply (capped; card reports fill + freshness every turn); rule-break rate ≤ 5% on planted situations; every 0 / ≥95% target gets a positive control seen failing before night one (lives in D3.4); upkeep per D1.2. | LifeOS + Bob |
 | D2.1 | Handoff note | Toodledo task note, written at session end | | | |
 | D2.2 | Confirmed facts home | Obsidian vault in git | | | |
 | D2.3 | Core card | ≤ 1,500 characters shared + ≤ 500 per agent, nightly | | | |
